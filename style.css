@@ -1,0 +1,1993 @@
+@charset "uft-8";
+
+@import url('https://fonts.cdnfonts.com/css/irina');
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Adamiya Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Adamiya Regular'), url('AdamiyaRegular-MAAep.woff') format('woff');
+    }
+
+
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+@font-face {
+    font-family: 'YeogiOttaeJalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+ @font-face {
+      font-family: 'American Captain';
+      src: url('AmericanCaptain.woff2') format('woff2');
+    }
+    
+  
+
+@import url('https://fonts.cdnfonts.com/css/american-captain-2');
+
+
+/*팝업*/
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  display: none;
+}
+
+.popup {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.popup img {
+  display: block;
+  width: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 25px; height: 25px;
+  cursor: pointer;
+}
+
+.bottom-bar {
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup label {
+  cursor: pointer;
+}
+
+/*전체페이지 설정*/
+html {
+    margin:0;
+    border:0;
+}
+body {
+    height:100%;
+    margin:0;
+    border:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    /* overflow-y: auto !important; */
+    
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); /* JavaScript 적용 후 덮어쓰기 */
+    margin: 0;
+    padding: 0;
+    font-family: notosanskr;
+}
+
+.wrap {
+    width: 100%;
+    height: calc(var(--svh, 1svh) * 100);
+    
+    scroll-snap-type: y mandatory;
+}
+
+.container {
+    scroll-snap-align: center; 
+    width: 100%;
+    height: calc(var(--svh, 1svh) * 100); 
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+div.allcontbox {
+    width: 100%;
+    min-height: calc(var(--svh, 1svh) * 100); /* 최소 높이 추가 */
+    position: relative;
+}
+
+p{
+    margin:0;
+}
+
+
+/*첫번째 페이지*/
+
+div.allcontbox{
+    width:100%;
+    position: relative;
+}
+
+div#firstpage div.allcontbox{
+    background: url(/img/1/05.png) no-repeat center;
+    background-size: cover;
+}
+
+div#firstpage div.allcontbox ul.menu{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin:0 auto;
+}
+
+div#firstpage div.allcontbox ul.menu li{
+    list-style-type: none;
+    margin-top:40px;
+}
+
+div#firstpage div.allcontbox ul.menu li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: notosanskr;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+
+div#firstpage div.allcontbox ul.menu li:first-child{
+    margin-top: 45px;
+}
+
+div#firstpage div.allcontbox .thelogo{
+    position: absolute;
+    top: 75%;
+    left: 29%;
+}
+
+div#firstpage div.allcontbox .titlearea{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    margin-top:68vh;
+}
+
+div#firstpage div.allcontbox .titlearea h2{
+    font-size: 53px;
+    font-family: 'YeogiOttaeJalnanGothic';
+    color:#fff;
+    position: absolute;
+    top:0%;
+    left:50%;
+    transform: translate(-50%, -103px);
+    display: block;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-weight: 400;
+}
+
+div#firstpage div.allcontbox .titlearea img{
+    position: absolute;
+    top:0%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+.fade-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* 각 글자에 공통 애니메이션 */
+.fade-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInChar 0.4s ease-out forwards;
+}
+
+/* 한 글자씩 딜레이 차이를 줌 */
+.fade-text span:nth-child(1) { animation-delay: 0s; }
+.fade-text span:nth-child(2) { animation-delay: 0.05s; }
+.fade-text span:nth-child(3) { animation-delay: 0.1s; }
+.fade-text span:nth-child(4) { animation-delay: 0.15s; }
+/* ... 계속 이어서 필요만큼 nth-child 추가 */
+
+@keyframes fadeInChar {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*두번째 페이지*/
+
+ /*공통메뉴*/
+ .container .allcontbox .commommenu{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin:0 auto;
+ }
+
+ .container .allcontbox .commommenu li{
+    list-style-type: none;
+    margin-top:40px;
+    color:#ffcb11;
+    text-decoration: none;
+    font-size: 35px;
+    font-family: notosanskr;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+ }
+
+  .container .allcontbox .commommenu li:first-child{
+    margin-top: 45px;
+  }
+  /*공통메뉴 끝*/
+
+#secondpage{
+    background-color: #0f0f1f;
+}
+
+#secondpage .maintitle{
+    font-family: 'American Captain', sans-serif;
+    color:#fff;
+    font-size: 60px;
+    margin:15px 0 40px 200px;
+    letter-spacing: 8px;
+    word-spacing: 10px;
+    
+} 
+#secondpage .secondbox{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#secondpage .secondbox .secondimgbox img{
+    border:#ffcb11 2px dashed;
+    padding:20px;
+    width:80%;
+    height:auto;
+    border-radius: 30px;
+}
+
+#secondpage .secondbox .secondtxtbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt .titletxt{
+    color:#ffcb11;
+    display: flex;
+    align-items: center; 
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt .titletxt .star{
+    font-size: 25px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt .titletxt h1{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt p{
+    font-size: 22px;
+    color:#fff;
+}
+
+.introtxt {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.introtxt.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 세번째 페이지 */
+#thirdpage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#thirdpage .allcontbox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#thirdpage .commommenu {
+  z-index: 3;
+  position: relative;
+}
+
+#thirdpage .allcontbox .thirdbox {
+  display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#thirdpage .allcontbox .thirdbox .blackbox {
+  position: relative;
+  width: calc(100% / 6);
+  height: 100%;
+  overflow: hidden;
+}
+
+/* #thirdpage .allcontbox .thirdbox .herobox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+#thirdpage .allcontbox .thirdbox .herobox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #fff;
+}
+
+#thirdpage .allcontbox .thirdbox .shadowbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+#thirdpage .allcontbox .thirdbox .shadowbox.hover-hide {
+  opacity: 0;
+  pointer-events: none; 
+}
+
+#thirdpage .yellowbox {
+  position: relative;
+  top: 60%;
+  left: 10%;
+  width: 80%;
+  height: 20vh;
+  background: #ffcb11;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+#thirdpage .yellowbox .namebox {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#thirdpage .yellowbox .namebox.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+#thirdpage .yellowbox .namebox .heroname {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 30px;
+  position: absolute;
+  top: -25px;
+  left: 60px;
+  font-weight: 600;
+}
+
+#thirdpage .yellowbox .namebox .herotxt {
+  font-size: 22px;
+  padding: 50px 60px;
+}
+
+
+/*네번째 페이지*/
+
+div#fourthpage div.allcontbox{
+    background: url(/img/4/4.png) no-repeat center;
+    background-size: cover;
+}
+
+#fourthpage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#fourthpage .commommenu {
+    position: relative;
+    z-index: 3;
+}
+
+/*---- 슬라이더 ----*/
+.news-slider {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  transform: translateY(10%);
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.slide {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 30px 50px 100px 40px;
+  box-sizing: border-box;
+}
+
+.slide h3 {
+  font-size: 40px;
+  color: #ffcb11;
+  font-weight: 600;
+}
+
+.slide p {
+  font-size: 25px;
+  line-height: 33px;
+  text-align: justify;
+  padding-right: 50px;
+}
+
+.slide img {
+  height: auto;
+  display: block;
+}
+
+.news-slider button.prev,
+.news-slider button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.news-slider button.prev { left: 10px; }
+.news-slider button.next { right: 10px; }
+
+.news-slider button img {
+  width: 50px;
+  height: 50px;
+}
+
+
+/*다섯번째 페이지*/
+
+#fifthpage .mdarea{
+    display: grid;
+    margin: 20px auto 0;
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+#fifthpage .mdarea .mainmd{
+    display: flex;
+    /* gap: 30px; */
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+#fifthpage .mdarea .mainmd:hover{
+    border: 2px solid #2591d2;
+}
+
+#fifthpage .mdarea .mainmd .mdtxt{
+    padding: 30px 20px 0 40px;
+}
+
+#fifthpage .mdarea .mainmd .mdtxt h3{
+    font-size: 22px;
+}
+
+#fifthpage .mdarea .mainmd .mdtxt .price{
+    font-size: 20px;
+}
+
+#fifthpage .mdarea .mainmd .mdtxt .skyblue{
+    background-color: #2591d2;
+    color:#fff;
+    padding:10px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    width: fit-content;
+    font-weight: 500;
+}
+
+#fifthpage .mdarea .mainmd .mdtxt .skyblue:hover{
+    cursor: pointer;
+}
+
+#fifthpage .mdarea .mainmd img{
+    width: 50%;
+    height: auto;
+    padding: 30px;
+}
+
+#fifthpage .mdtitle{
+    font-size: 23px;
+    padding: 50px 0  0 240px;
+}
+#fifthpage .membermd{
+    background-color: #f0f0f0;
+    padding: 40px;
+    width: 100%;
+}
+
+#fifthpage .membermd .mdmemers{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.meberarea:hover{
+    cursor: pointer;
+}
+
+
+#fifthpage .membermd .mdmemers .meberarea{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;
+}
+#fifthpage .membermd .mdmemers .meberarea img:hover{
+    border: 2px solid #2591d2;
+}
+/*여섯번째 페이지*/
+
+div#sixthpage{
+    background-color: #fff;
+}
+div#sixthpage div.allcontbox{
+    background: url(/img/6/2.png) no-repeat top;
+}
+
+
+div#sixthpage div.allcontbox .sixthbox{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 20vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+div#sixthpage div.allcontbox .sixthbox .titletxt{
+    color:#ffcb11;
+    display: flex;
+    align-items: center;   
+    gap: 10px;
+}
+
+div#sixthpage div.allcontbox .sixthbox .titletxt h1{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.titletxt .star{
+    font-size: 25px;
+}
+
+div#sixthpage div.allcontbox .sixthbox .conttxt{
+    color:#fff;
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+
+.conttxt {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.2s ease;
+}
+
+.conttxt.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*반응형*/
+/* PC에서 풀페이지 스크린 모드 적용 */
+@media (min-width: 549px) {
+    html, body {
+        scroll-snap-type: y mandatory;
+    }
+
+    .wrap {
+        width: 100%;
+        height: calc(var(--vh, 1vh) * 100);
+        
+        scroll-snap-type: y mandatory;
+    }
+
+    .container {
+        scroll-snap-align: center;
+        width: 100%;
+        height: calc(var(--vh, 1vh) * 100);
+        box-sizing: border-box;
+    }
+
+    div.allcontbox {
+        width: 100%;
+        height: calc(var(--vh, 1vh) * 100);
+        position: relative;
+    }
+}
+
+/* 모바일에서는 일반 스크롤 적용 */
+@media (max-width: 549px) {
+    .wrap {
+        height: auto;
+        overflow-y: auto; 
+        scroll-snap-type: none;
+    }
+
+    .container {
+        height: auto; /* 자동 높이 */
+        scroll-snap-align: none; /* 스냅 정렬 해제 */
+    }
+
+
+}
+
+@media  (max-width: 549px){
+
+    	/*모바일 풀페이지 적용 안 됨*/
+
+
+        div#firstpage div.allcontbox {
+            height: calc(var(--svh, 1svh) * 100);
+            overflow: hidden;
+        }
+    
+        div#secondpage .allcontbox,
+        div#thirdpage div.allcontbox,
+        div#fourthpage div.allcontbox{
+            height: max-content;
+        }
+
+
+#secondpage#thirdpage,#fourthpage,#fifthpage,#sixthpage{
+    height: auto;
+}
+
+div.allcontbox{
+    height: auto;
+}
+
+ /*첫번째 페이지*/
+ .container{
+    width: 100%;
+    overflow: hidden;
+}
+
+div#firstpage div.allcontbox{
+    width: 100%;
+}
+
+div#firstpage div.allcontbox ul.menu{
+    display: none;
+}
+
+div#firstpage div.allcontbox .thelogo{
+    width: 70%;
+    left: 15%;
+}
+div#firstpage div.allcontbox .titlearea h2{
+    font-size: 22px;
+    letter-spacing: unset;
+    word-spacing: unset;
+    top:0%;
+    left:50%;
+    transform: translate(-50%, -32px);
+    margin: 0 auto;
+    position: absolute;
+}
+
+div#firstpage div.allcontbox .titlearea img{
+    position: absolute;
+    top:0%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+
+/*두번째페이지*/
+div#secondpage{
+    height: auto;
+}
+
+.container .allcontbox .commommenu{
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.container .allcontbox .commommenu li{
+    font-size: 20px;
+}
+
+.container .allcontbox .commommenu img{
+    display: none;
+    
+}
+
+#secondpage .maintitle{
+    font-size: 40px;
+    margin: 20px 40px;
+    letter-spacing: 5px;
+    word-spacing: 6px;
+}
+
+#secondpage .secondbox{
+    flex-direction: column;
+    width: 85%;
+}
+
+#secondpage .secondbox .secondimgbox img{
+    width: 90%;
+}
+
+#secondpage .secondbox .secondtxtbox{
+        margin-bottom: 70px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt .titletxt h1{
+    font-size: 22px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt p{
+    text-align: justify;
+    font-size: 18px;
+}
+
+/*세번째 페이지*/
+#thirdpage .yellowbox{
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    height: 22vh;
+    overflow: scroll;
+}
+#thirdpage .yellowbox .namebox .heroname{
+    left: 25px;
+    font-size: 17px;
+    top: 0;
+
+
+}
+
+#thirdpage .yellowbox .namebox .herotxt{
+    font-size: 17px;
+    padding: 50px 25px;
+}
+
+/**/
+
+
+
+ #thirdpage {
+    height: auto; 
+  }
+
+  #thirdpage .allcontbox .thirdbox {
+    flex-wrap: wrap; 
+  }
+
+  #thirdpage .allcontbox .thirdbox .blackbox {
+    width: calc(100% / 3); 
+    height: 50vh; 
+  }
+
+
+  /**/
+
+/*네번째 페이지*/
+
+#secondpage#thirdpage,#fourthpage,#fifthpage,#sixthpage{
+    height: auto;
+}
+.news-slider{
+    transform: unset;
+}
+
+.slide {
+    flex-direction: column;
+    width: 100% !important;
+    margin: 0 auto !important;
+      height: auto !important;
+    /* padding: 20px; */
+  }
+
+  .slide h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .slide p {
+    font-size: 17px;
+    line-height: 23px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .slide img {
+    width: 65%;
+    margin-top: 20px;
+  }
+
+  .news-slider button img {
+    width: 15px;
+    height: 15px;
+
+  }
+/*다섯번째 페이지*/
+
+#fifthpage .mdarea{
+    grid-template-columns: repeat(1, 3fr);
+}
+
+#fifthpage .mdarea .mainmd{
+    flex-direction: column-reverse;
+    padding: 20px 0;
+}
+
+#fifthpage .mdarea .mainmd img{
+    width: 100%;
+    padding:unset;
+}
+
+#fifthpage .mdarea .mainmd .mdtxt br{
+    display: none;
+}
+
+#fifthpage .mdtitle{
+    padding: 20px 0px 0 60px;
+}
+
+#fifthpage .membermd{
+    padding: 0 0 70px 0;
+}
+
+#fifthpage .membermd .mdmemers{
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+}
+
+#fifthpage .membermd .mdmemers .meberarea img{
+    width: 90%;
+}
+/*여섯번째 페이지*/
+
+div#sixthpage div.allcontbox .sixthbox{
+    position: unset;
+    justify-content: center;
+}
+div#sixthpage div.allcontbox .sixthbox .imgbox{
+    display: none;
+}
+
+div#sixthpage div.allcontbox .sixthbox .titletxt h1{
+    font-size: 22px;
+}
+
+div#sixthpage div.allcontbox .sixthbox p{
+    font-size: 20px;
+    line-height: 28px;
+}
+}
+
+
+@media (min-width: 550px) and (max-width: 767px){
+    .wrap {
+        height: auto;
+        overflow-y: auto; 
+        scroll-snap-type: none;
+    }
+
+    .container {
+        height: auto; /* 자동 높이 */
+        scroll-snap-align: none; /* 스냅 정렬 해제 */
+    }
+
+        div#firstpage div.allcontbox {
+            height: calc(var(--svh, 1svh) * 100);
+            overflow: hidden;
+        }
+    
+        div#secondpage .allcontbox,
+        div#thirdpage div.allcontbox,
+        div#fourthpage div.allcontbox{
+            height: fit-content;
+        }
+
+
+#secondpage#thirdpage,#fourthpage,#fifthpage,#sixthpage{
+    height: auto;
+}
+
+div.allcontbox{
+    height: auto;
+}
+ /*첫번째 페이지*/
+ .container{
+    width: 100%;
+    overflow: hidden;
+}
+
+div#firstpage div.allcontbox{
+    width: 100%;
+}
+
+div#firstpage div.allcontbox ul.menu{
+    display: none;
+}
+
+div#firstpage div.allcontbox .thelogo{
+    width: 70%;
+    left: 15%;
+}
+div#firstpage div.allcontbox .titlearea h2{
+    letter-spacing: unset;
+    word-spacing: unset;
+    margin: 0 auto;
+    top:0;
+    left:50%;
+    transform: translate(-50%, -46px);
+    font-size: 36px;
+    position: absolute;
+}
+
+div#firstpage div.allcontbox .titlearea img{
+    position: absolute;
+    top:0%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+
+/*두번째페이지*/
+div#secondpage{
+    height: auto;
+}
+
+.container .allcontbox .commommenu{
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.container .allcontbox .commommenu li{
+    font-size: 20px;
+}
+
+.container .allcontbox .commommenu img{
+    display: none;
+    
+}
+
+#secondpage .maintitle{
+    font-size: 40px;
+    margin: 20px 40px;
+    letter-spacing: 5px;
+    word-spacing: 6px;
+}
+
+#secondpage .secondbox{
+    flex-direction: column;
+    width: 85%;
+}
+
+#secondpage .secondbox .secondimgbox img{
+    width: 90%;
+}
+
+#secondpage .secondbox .secondtxtbox{
+        margin-bottom: 70px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt .titletxt h1{
+    font-size: 22px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt p{
+    text-align: justify;
+    font-size: 18px;
+}
+
+/*세번째 페이지*/
+#thirdpage .yellowbox{
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    height: 22vh;
+    overflow: scroll;
+}
+#thirdpage .yellowbox .namebox .heroname{
+    left: 25px;
+    font-size: 17px;
+    top: 0;
+
+
+}
+
+#thirdpage .yellowbox .namebox .herotxt{
+    font-size: 17px;
+    padding: 50px 25px;
+}
+
+#thirdpage .allcontbox .thirdbox .herobox img{
+    transform: translate(0%, -5%);
+}
+
+#thirdpage .allcontbox .thirdbox .blackbox:last-child img{
+    transform: translate(0%, -20%);
+}
+
+/**/
+
+
+  #thirdpage {
+    height: auto; 
+  }
+
+  #thirdpage .allcontbox .thirdbox {
+    flex-wrap: wrap; 
+  }
+
+  #thirdpage .allcontbox .thirdbox .blackbox {
+    width: calc(100% / 3);
+    height: 50vh; 
+  }
+
+  /**/
+
+
+
+/*네번째 페이지*/
+
+#fourthpage{
+    height: auto;
+}
+.news-slider{
+    transform: unset;
+}
+
+.slide {
+    flex-direction: column;
+    width: 100% !important;
+    margin: 0 auto !important;
+      height: auto !important;
+    /* padding: 20px; */
+  }
+
+  .slide h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .slide p {
+    font-size: 17px;
+    line-height: 23px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .slide img {
+    width: 40%;
+    margin-top: 20px;
+  }
+
+  .news-slider button img {
+    width: 15px;
+    height: 15px;
+
+  }
+/*다섯번째 페이지*/
+
+#fifthpage .mdarea{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#fifthpage .mdarea .mainmd{
+    flex-direction: column-reverse;
+    padding: 20px 0;
+}
+
+#fifthpage .mdarea .mainmd img{
+    width: 100%;
+    padding:unset;
+}
+
+#fifthpage .mdarea .mainmd .mdtxt br{
+    display: block;
+}
+
+#fifthpage .mdtitle{
+    padding: 20px 0px 0 60px;
+}
+
+#fifthpage .membermd{
+    padding: 0 0 70px 0;
+}
+
+#fifthpage .membermd .mdmemers{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+}
+
+#fifthpage .membermd .mdmemers .meberarea img{
+    width: 90%;
+}
+/*여섯번째 페이지*/
+
+div#sixthpage div.allcontbox .sixthbox{
+    position: absolute;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-left: 40px;
+    align-items: center;
+    top:30%;
+    bottom: unset;
+}
+div#sixthpage div.allcontbox .sixthbox .imgbox img{
+    width: 100%;
+    height: auto;
+}
+
+div#sixthpage div.allcontbox .sixthbox .titletxt h1{
+    font-size: 22px;
+}
+
+div#sixthpage div.allcontbox .sixthbox p{
+    font-size: 20px;
+    line-height: 28px;
+}
+}
+ 
+@media (min-width: 768px) and (max-width: 991px) {
+    /*태블릿 세로*/
+
+    .wrap {
+        height: auto;
+        overflow-y: auto; 
+        scroll-snap-type: none;
+    }
+
+    .container {
+        height: auto; /* 자동 높이 */
+        scroll-snap-align: none; /* 스냅 정렬 해제 */
+    }
+
+        div#firstpage div.allcontbox {
+            height: calc(var(--svh, 1svh) * 100);
+            overflow: hidden;
+        }
+    
+        div#secondpage .allcontbox,
+        div#thirdpage div.allcontbox,
+        div#fourthpage div.allcontbox{
+            height: fit-content;
+        }
+
+#secondpage#thirdpage,#fourthpage,#fifthpage,#sixthpage{
+    height: auto;
+}
+div.allcontbox{
+    height: auto;
+}
+ /*첫번째 페이지*/
+ .container{
+    width: 100%;
+    overflow: hidden;
+}
+
+div#firstpage div.allcontbox{
+    width: 100%;
+}
+
+div#firstpage div.allcontbox ul.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+div#firstpage div.allcontbox ul.menu li a{
+    font-size: 18px;
+}
+div#firstpage div.allcontbox ul.menu li a img{
+    width: 100px;
+}
+
+
+div#firstpage div.allcontbox .thelogo{
+    width: 70%;
+    left: 15%;
+}
+div#firstpage div.allcontbox .titlearea h2{
+    letter-spacing: unset;
+    word-spacing: unset;
+    transform: translate(-50%, -49px);
+    margin: 0 auto;
+    left: 50%;
+    top: 0%;
+    font-size: 39px;
+    position: absolute;
+}
+
+
+div#firstpage div.allcontbox .titlearea img{
+    position: absolute;
+    top:0%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+/*두번째페이지*/
+div#secondpage{
+    height: auto;
+}
+
+.container .allcontbox .commommenu{
+    justify-content: space-between;
+    width: 90%;
+    display: flex
+;
+}
+
+.container .allcontbox .commommenu li{
+    font-size: 20px;
+}
+
+.container .allcontbox .commommenu img {
+    display: block;
+    width: 100px;
+}
+
+#secondpage .maintitle{
+    font-size: 40px;
+    margin: 20px 40px 20px 60px;
+    letter-spacing: 5px;
+    word-spacing: 6px;
+}
+
+#secondpage .secondbox{
+    flex-direction: column;
+    width: 85%;
+}
+
+#secondpage .secondbox .secondimgbox img{
+    width: 90%;
+}
+
+#secondpage .secondbox .secondtxtbox{
+        margin-bottom: 70px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt .titletxt h1{
+    font-size: 22px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt p{
+    text-align: justify;
+    font-size: 18px;
+}
+
+/*세번째 페이지*/
+#thirdpage .yellowbox{
+    position: absolute;
+    top: 76%;
+    height: 22vh;
+    /* overflow: scroll; */
+}
+#thirdpage .yellowbox .namebox .heroname{
+    font-size: 17px;
+    top: -15px;
+    left: 25px;
+}
+
+#thirdpage .yellowbox .namebox .herotxt{
+    font-size: 17px;
+    padding: 20px 25px;
+}
+
+#thirdpage .allcontbox .thirdbox .herobox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*네번째 페이지*/
+
+#fourthpage{
+    height: auto;
+}
+.news-slider{
+    transform: unset;
+}
+
+.slide {
+    flex-direction: column;
+    width: 100% !important;
+    margin: 0 auto !important;
+      height: auto !important;
+    /* padding: 20px; */
+  }
+
+  .slide h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .slide p {
+    font-size: 17px;
+    line-height: 23px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .slide img {
+    width: 40%;
+    margin-top: 20px;
+  }
+
+  .news-slider button img {
+    width: 15px;
+    height: 15px;
+
+  }
+/*다섯번째 페이지*/
+
+#fifthpage .mdarea{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#fifthpage .mdarea .mainmd{
+    flex-direction: column-reverse;
+    padding: 20px 0;
+}
+
+#fifthpage .mdarea .mainmd img{
+    width: 100%;
+    padding:unset;
+}
+
+#fifthpage .mdarea .mainmd .mdtxt br{
+    display: block;
+}
+
+#fifthpage .mdtitle{
+    padding: 20px 0px 0 60px;
+}
+
+#fifthpage .membermd{
+    padding: 0 0 70px 0;
+}
+
+#fifthpage .membermd .mdmemers{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    width: 90%;
+}
+
+#fifthpage .membermd .mdmemers .meberarea img{
+    width: 90%;
+}
+/*여섯번째 페이지*/
+
+div#sixthpage div.allcontbox .sixthbox{
+    position: absolute;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-left: 40px;
+    align-items: center;
+    top: 0;
+    bottom: unset;
+}
+div#sixthpage div.allcontbox .sixthbox .imgbox img{
+    width: 100%;
+    height: auto;
+}
+
+div#sixthpage div.allcontbox .sixthbox .titletxt h1{
+    font-size: 22px;
+}
+
+div#sixthpage div.allcontbox .sixthbox p{
+    font-size: 20px;
+    line-height: 28px;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /*태블릿 가로*/
+
+    .wrap {
+        height: auto;
+        overflow-y: auto; 
+        scroll-snap-type: none;
+    }
+
+    .container {
+        height: auto; /* 자동 높이 */
+        scroll-snap-align: none; /* 스냅 정렬 해제 */
+    }
+
+        div#firstpage div.allcontbox {
+            height: calc(var(--svh, 1svh) * 100);
+            overflow: hidden;
+        }
+    
+        div#secondpage .allcontbox,
+        div#thirdpage div.allcontbox,
+        div#fourthpage div.allcontbox{
+            height: fit-content;
+        }
+
+#secondpage#thirdpage,#fourthpage,#fifthpage,#sixthpage{
+    height: auto;
+}
+
+div.allcontbox{
+    height: auto;
+}
+   /*첫번째 페이지*/
+ .container{
+    width: 100%;
+    overflow: hidden;
+}
+
+div#firstpage div.allcontbox{
+    width: 100%;
+}
+
+div#firstpage div.allcontbox ul.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+div#firstpage div.allcontbox ul.menu li a{
+    font-size: 18px;
+}
+div#firstpage div.allcontbox ul.menu li a img{
+    width: 120px;
+}
+
+
+div#firstpage div.allcontbox .thelogo{
+    width: 70%;
+    left: 15%;
+}
+div#firstpage div.allcontbox .titlearea h2{
+    letter-spacing: unset;
+    word-spacing: unset;
+    top:0%;
+    left:50%;
+    transform: translate(-50%,-55px);
+    margin: 0 auto;
+    font-size: 45px;
+    position: absolute;
+}
+div#firstpage div.allcontbox .titlearea img{
+    position: absolute;
+    top:0%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+/*두번째페이지*/
+div#secondpage{
+    height: auto;
+}
+
+.container .allcontbox .commommenu{
+    justify-content: space-between;
+    width: 90%;
+    display: flex
+;
+}
+
+.container .allcontbox .commommenu li{
+    font-size: 20px;
+}
+
+.container .allcontbox .commommenu img {
+    display: block;
+    width: 100px;
+}
+
+#secondpage .maintitle{
+    font-size: 40px;
+    margin: 20px 40px 20px 80px;
+    letter-spacing: 5px;
+    word-spacing: 6px;
+}
+
+#secondpage .secondbox{
+    width: 90%;
+   align-items: center;
+}
+
+#secondpage .secondbox .secondimgbox img{
+    width: 70%;
+}
+
+#secondpage .secondbox .secondtxtbox{
+        margin-bottom: 70px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt .titletxt h1{
+    font-size: 22px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt p{
+    text-align: justify;
+    font-size: 18px;
+}
+
+/*세번째 페이지*/
+#thirdpage .yellowbox{
+    position: absolute;
+    top: 76%;
+    height: 22vh;
+    /* overflow: scroll; */
+}
+#thirdpage .yellowbox .namebox .heroname{
+    font-size: 25px;
+    top: -20px;
+    left: 25px;
+}
+
+#thirdpage .yellowbox .namebox .herotxt{
+    font-size: 21px;
+    padding: 20px 25px;
+}
+
+#thirdpage .allcontbox .thirdbox .herobox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*네번째 페이지*/
+
+#fourthpage{
+    height: auto;
+}
+.news-slider{
+    transform: unset;
+}
+
+.slide {
+    /* flex-direction: column;
+    width: 100% !important;
+    margin: 0 auto !important;
+      height: auto !important; */
+    padding: 10px 20px;
+  }
+
+  .slide h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .slide p {
+    font-size: 20px;
+    line-height: 35px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .slide img {
+    width: 40%;
+    margin-top: 20px;
+  }
+
+  .news-slider button img {
+    width: 35px;
+    height: 35px;
+
+  }
+/*다섯번째 페이지*/
+
+#fifthpage .mdarea{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#fifthpage .mdarea .mainmd{
+    flex-direction: column-reverse;
+    padding: 20px 0;
+}
+
+#fifthpage .mdarea .mainmd img{
+    width: 100%;
+    padding:unset;
+}
+
+#fifthpage .mdarea .mainmd .mdtxt br{
+    display: block;
+}
+
+#fifthpage .mdtitle{
+    padding: 20px 0px 0 60px;
+}
+
+#fifthpage .membermd{
+    padding: 0 0 70px 0;
+}
+
+#fifthpage .membermd .mdmemers{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 90%;
+}
+
+#fifthpage .membermd .mdmemers .meberarea img{
+    width: 90%;
+}
+/*여섯번째 페이지*/
+
+div#sixthpage div.allcontbox .sixthbox{
+    position: absolute;
+    justify-content: space-evenly;
+    gap: 20%;
+    margin-left: 80px;
+    align-items: center;
+    top: 0;
+}
+div#sixthpage div.allcontbox .sixthbox .imgbox img{
+    width: 70%;
+    height: auto;
+}
+
+div#sixthpage div.allcontbox .sixthbox .titletxt h1{
+    font-size: 22px;
+}
+
+div#sixthpage div.allcontbox .sixthbox p{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+  
+    }
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+    /*데스크탑 일반*/
+
+
+    .wrap {
+        height: auto;
+        overflow-y: auto; 
+        scroll-snap-type: none;
+    }
+
+    .container {
+        height: auto; /* 자동 높이 */
+        scroll-snap-align: none; /* 스냅 정렬 해제 */
+    }
+
+        div#firstpage div.allcontbox {
+            height: calc(var(--svh, 1svh) * 100);
+            overflow: hidden;
+        }
+    
+        div#secondpage .allcontbox,
+        div#thirdpage div.allcontbox,
+        div#fourthpage div.allcontbox{
+            height: fit-content;
+        }
+
+#secondpage#thirdpage,#fourthpage,#fifthpage,#sixthpage{
+    height: auto;
+}
+div.allcontbox{
+    height: auto;
+}
+       /*첫번째 페이지*/
+ .container{
+    width: 100%;
+    overflow: hidden;
+}
+
+div#firstpage div.allcontbox{
+    width: 100%;
+}
+
+div#firstpage div.allcontbox ul.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+div#firstpage div.allcontbox ul.menu li a{
+    font-size: 20px;
+}
+div#firstpage div.allcontbox ul.menu li a img{
+    width: 150px;
+}
+
+
+div#firstpage div.allcontbox .thelogo{
+    width: 70%;
+    left: 15%;
+}
+div#firstpage div.allcontbox .titlearea h2{
+    letter-spacing: unset;
+    word-spacing: unset;
+      top:0%;
+    left:50%;
+    transform: translate(-50%,-58px);
+    margin: 0 auto;
+    font-size: 48px;
+    position: absolute;
+}
+
+div#firstpage div.allcontbox .titlearea img{
+    position: absolute;
+    top:0%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+
+/*두번째페이지*/
+div#secondpage{
+    height: auto;
+}
+
+.container .allcontbox .commommenu{
+    justify-content: space-between;
+    width: 90%;
+    display: flex
+;
+}
+
+.container .allcontbox .commommenu li{
+    font-size: 20px;
+}
+
+.container .allcontbox .commommenu img {
+    display: block;
+    width: 150px;
+}
+
+#secondpage .maintitle{
+    font-size: 50px;
+    margin: 20px 40px 10px 80px;
+    letter-spacing: 5px;
+    word-spacing: 6px;
+}
+
+#secondpage .secondbox{
+    width: 90%;
+   align-items: center;
+}
+
+#secondpage .secondbox .secondimgbox img{
+    width: 70%;
+}
+
+#secondpage .secondbox .secondtxtbox{
+        margin-bottom: 70px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt .titletxt h1{
+    font-size: 22px;
+}
+
+#secondpage .secondbox .secondtxtbox .introtxt p{
+    text-align: justify;
+    font-size: 18px;
+}
+
+/*세번째 페이지*/
+#thirdpage .yellowbox{
+    position: absolute;
+    top: 76%;
+    height: 22vh;
+    /* overflow: scroll; */
+}
+#thirdpage .yellowbox .namebox .heroname{
+    font-size: 25px;
+    top: -20px;
+    left: 25px;
+}
+
+#thirdpage .yellowbox .namebox .herotxt{
+    font-size: 21px;
+    padding: 35px 25px;
+}
+
+#thirdpage .allcontbox .thirdbox .herobox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*네번째 페이지*/
+
+#fourthpage{
+    height: auto;
+}
+.news-slider{
+    transform: unset;
+}
+
+.slide {
+    /* flex-direction: column;
+    width: 100% !important;
+    margin: 0 auto !important;
+      height: auto !important; */
+    padding: 10px 20px;
+  }
+
+  .slide h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .slide p {
+    font-size: 20px;
+    line-height: 35px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .slide img {
+    width: 40%;
+    margin-top: 20px;
+  }
+
+  .news-slider button img {
+    width: 35px;
+    height: 35px;
+
+  }
+/*다섯번째 페이지*/
+
+#fifthpage .mdarea{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#fifthpage .mdarea .mainmd{
+    flex-direction: column-reverse;
+    padding: 20px 0;
+}
+
+#fifthpage .mdarea .mainmd img{
+    width: 100%;
+    padding:unset;
+}
+
+#fifthpage .mdarea .mainmd .mdtxt br{
+    display: block;
+}
+
+#fifthpage .mdtitle{
+    padding: 20px 0px 0 60px;
+}
+
+#fifthpage .membermd{
+    padding: 0 0 70px 0;
+}
+
+#fifthpage .membermd .mdmemers{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 90%;
+}
+
+#fifthpage .membermd .mdmemers .meberarea img{
+    width: 90%;
+}
+/*여섯번째 페이지*/
+
+div#sixthpage div.allcontbox .sixthbox{
+    position: absolute;
+    justify-content: space-evenly;
+    gap: 20%;
+    margin-left: 80px;
+    align-items: center;
+    top: 0;
+}
+div#sixthpage div.allcontbox .sixthbox .imgbox img{
+    width: 70%;
+    height: auto;
+}
+
+div#sixthpage div.allcontbox .sixthbox .titletxt h1{
+    font-size: 22px;
+}
+
+div#sixthpage div.allcontbox .sixthbox p{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+    }
+
+
